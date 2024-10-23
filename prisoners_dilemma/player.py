@@ -1,7 +1,7 @@
 import random
 
 class MyPlayer:
-    '''Player plays Tit-For-Tat strategy by default, but adjusts based on the payoff matrix and game dynamics'''
+    '''Tit-For-Tat strategy by default, adjusts based on various parameters'''
     
     COOPERATE = False
     DEFECT = True 
@@ -69,11 +69,11 @@ class MyPlayer:
         mutual_defect = self.payoff_matrix[1][1][0]    # Payoff when both defect
         
         # Strategy determination based on relative differences in payoffs
-        if defect_vs_coop - coop_vs_defect > MyPlayer.PAYOFF_THRESHOLD:
-            self.strategy = "always_defect"
-        elif coop_vs_defect - defect_vs_coop > MyPlayer.PAYOFF_THRESHOLD:
-            self.strategy = "always_cooperate"
-        elif mutual_coop > mutual_defect and defect_vs_coop > coop_vs_defect:
+        # if defect_vs_coop - coop_vs_defect > MyPlayer.PAYOFF_THRESHOLD:
+        #     self.strategy = "always_defect"
+        # elif coop_vs_defect - defect_vs_coop > MyPlayer.PAYOFF_THRESHOLD:
+        #     self.strategy = "always_cooperate"
+        if mutual_coop > mutual_defect and defect_vs_coop > coop_vs_defect:
             self.strategy = "tit_for_tat"
         elif defect_vs_coop > mutual_coop and mutual_defect > coop_vs_defect:
             self.strategy = "always_defect"

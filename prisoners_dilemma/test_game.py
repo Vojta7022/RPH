@@ -21,7 +21,7 @@ import player_random
 import other_player
 
 # define the payoff matrix; see game.py for detailed explanation of this matrix
-payoff_matrix = ( ((5,5),(1,70)) , ((70,1),(2,2)) )
+payoff_matrix = ( ((2,2),(70,70)), ((70,70),(4,4)) )
 # define the number of iterations
 number_of_iterations = 200
 
@@ -45,3 +45,4 @@ print('playerA got:',scores[0], '\nplayerB got:', scores[1])
 # ( ((2,2),(4,6)) , ((6,4),(10,10)) )
 # ( ((5,5),(1,70)) , ((70,1),(2,2)) )
 # ( ((4,4),(1,6)) , ((6,1),(2,2)) )
+# ( ((2,2),(70,70)), ((70,70),(4,4)) )
