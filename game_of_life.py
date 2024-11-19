@@ -218,7 +218,7 @@ if __name__ == "__main__":
 
 
     zoom = 20
-    game = GameOfLife(pulsar,True,zoom)
+    game = GameOfLife(gosper,True,zoom)
     game.run_life(10000000)
 
 
