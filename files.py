@@ -23,3 +23,6 @@ path.write_text(text, encoding="utf-8")
 
 path.read_text(encoding="utf-8")
 
+def count_chars_in_file(file_path):
+    with open(file_path, "rt", encoding="utf-8") as f:
+        return len(f.read())

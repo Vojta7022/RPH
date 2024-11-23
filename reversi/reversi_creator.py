@@ -1,4 +1,4 @@
-import random_player
+import random_player, player, player2, test_player
 #import greedy_player
 #import alphabeta_player
 #import heuristic_player
@@ -214,7 +214,7 @@ class ReversiCreator(object):
 
 if __name__ == "__main__": 
     (choices,args) = getopt.getopt(sys.argv[1:],"")
-    players_dict = {'random':random_player.MyPlayer}
+    players_dict = {'random':random_player.MyPlayer, 'my_player':player.MyPlayer, 'test_player':test_player.MyPlayer, 'player2':player2.MyPlayer}
     #players_dict = {'random':random_player.MyPlayer,'greedy':greedy_player.MyPlayer,'alphabeta':alphabeta_player.MyPlayer,'heuristic':heuristic_player.MyPlayer}
     
     for arg in args:
